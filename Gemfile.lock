@@ -1,0 +1,22 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    faraday (0.9.1)
+      multipart-post (>= 1.2, < 3)
+    faraday_middleware (0.10.0)
+      faraday (>= 0.7.4, < 0.10)
+    multipart-post (2.0.0)
+    simple_oauth (0.3.1)
+    yelp (2.0.6)
+      faraday (~> 0.8, >= 0.8.0)
+      faraday_middleware (~> 0.8, >= 0.8.0)
+      simple_oauth (~> 0.3.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  yelp
+
+BUNDLED WITH
+   1.10.6
