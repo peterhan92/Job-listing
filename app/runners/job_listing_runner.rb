@@ -9,11 +9,11 @@ class	JobListingRunner
 		@array = JobListingCaller.new.json_parse(@job_type, @state)
 	end
 
-	def test_keys(v)
-		if v == "help"
-			help
+	def test_keys(input)
+		if input == "help"
+			keys
 			return true
-		elsif v == "exit"
+		elsif input == "exit"
 			abort("Goodbye!")
 		end
 	end
@@ -29,7 +29,7 @@ class	JobListingRunner
 		false
 	end
 
-	def help
+	def keys
 		puts "*Type 'exit' if you want to leave."
     puts "*Type 'help' to view this menu again."
 	end
@@ -56,7 +56,7 @@ class	JobListingRunner
 	end
 
 	def run
-		help
+		keys
 		while get_info
 		end
 		jobs_array
