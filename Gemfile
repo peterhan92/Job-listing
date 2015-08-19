@@ -1,5 +1,6 @@
-# A sample Gemfile
 source "https://rubygems.org"
 
-# gem 'HTTParty'
-gem 'yelp'
+group "development" do
+  gem "pry"
+  gem "pry-nav"
+end
