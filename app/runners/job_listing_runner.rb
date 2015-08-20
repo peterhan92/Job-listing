@@ -54,6 +54,7 @@ class	JobListingRunner
 
 	def no_return
 		if @array[0].nil?
+			puts
 			puts "There are no #{@job_type} jobs avaliable for state of #{@state} in the government database."
 			puts "Please try again!"
 			puts
@@ -63,6 +64,7 @@ class	JobListingRunner
 
 	def run
 		while get_info == true
+				get_info
 		end
 		jobs_array
 		search
