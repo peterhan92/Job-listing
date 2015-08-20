@@ -3,6 +3,7 @@ class	JobListingRunner
 	def initialize
 		system("clear")
 		puts "Welcome to the (USAjobs.gov) job search"
+		keys
 	end
 
 	def jobs_array
@@ -30,8 +31,10 @@ class	JobListingRunner
 	end
 
 	def keys
+		puts
 		puts "*Type 'exit' if you want to leave."
     puts "*Type 'help' to view this menu again."
+    puts
 	end
 
 	def search
@@ -52,12 +55,14 @@ class	JobListingRunner
 	def no_return
 		if @array[0].nil?
 			puts "There are no #{@job_type} jobs avaliable for state of #{@state} in the government database."
+			puts "Please try again!"
+			puts
+			run
 		end
 	end
 
 	def run
-		keys
-		while get_info
+		while get_info == true
 		end
 		jobs_array
 		search
